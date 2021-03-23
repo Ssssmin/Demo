@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clock-warpper{
+        position: relative;
+        width: 400px;
+        height: 400px;
+        margin: 40px auto;
+        border-radius: 50%;
+        /* border: 5px solid rgb(22, 21, 21); */
+        background-image: url(../pic/bg22.png);
+        background-size: cover;
+    }
+    .clock-warpper>div{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .hour-warpper{
+        width: 56%;
+        height: 56%;
+        animation: test 7200s linear infinite ;
+    }
+    .clock-warpper .hour{
+        height: 50%;
+        width: 3px;
+        background-color: black;
+        margin: 0 auto;
+    }
+    .min-warpper{
+        width: 70%;
+        height: 70%;
+        /* background-color: aliceblue; */
+        animation: test 600s steps(60) ;
+    }
+    .min{
+        height: 50%;
+        width: 2px;
+        background-color: black;
+        margin: 0 auto;
+    }
+    .sec-warpper{
+        width: 80%;
+        height: 80%;
+        /* background-color: aliceblue; */
+        animation: test 60s steps(60) infinite;
+    }
+    .sec{
+        height: 50%;
+        width: 1px;
+        background-color: red;
+        margin: 0 auto;
+    }
+    @keyframes test{
+        from{
+            transform: rotateZ(0);
+        }
+        to{
+            transform: rotateZ(360deg);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="clock-warpper">
+            <div class="hour-warpper">
+                <div class="hour">
+                </div>
+            </div>
+            <div class="min-warpper">
+                <div class="min">
+                </div>
+            </div>
+            <div class="sec-warpper">
+                <div class="sec">
+                </div>
+            </div>
+    </div>
+</body>
+</html>
